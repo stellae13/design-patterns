@@ -1,4 +1,4 @@
-package strategy;
+package strategy1;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -15,7 +15,6 @@ public class BinarySearch implements SearchBehavior{
         Collections.sort(data);
         int leftIndex = 0;
         int rightIndex = data.size();
-
         while (leftIndex <= rightIndex){
             int middle = leftIndex + (rightIndex - leftIndex)/2;
 
