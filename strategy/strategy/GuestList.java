@@ -14,11 +14,23 @@ public class GuestList {
   }
 
   public boolean add(String person){
-    return true;
+    if(searchBehavior.contains(people,person)) {
+      return false;
+    }
+    else {
+      people.add(person);
+      return true;
+    }
   }
 
   public boolean remove(String person){
-    return true;
+    if(searchBehavior.contains(people,person)) {
+      people.remove(person);
+      return true;
+    }
+    else{
+     return false; 
+    }
   }
 
   public String getTitle(){

@@ -6,7 +6,14 @@ public class LinearSearch implements SearchBehavior {
 
     @Override
     public boolean contains(ArrayList<String> data, String item) {
-        return true;
+        boolean found = false;
+        for(String index : data){
+            if (item.toLowerCase().equals(index.toLowerCase())){
+                found = true;
+                break;
+            }
+        }
+        return found;
     }
     
 }
