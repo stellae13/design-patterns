@@ -55,7 +55,8 @@ public class ListDriver {
     }
 
     /**
-     * Attempts to add the guest to the guest list
+     * Attempts to add the
+     *  guest to the guest list
      * 
      * @param guest The name to add to the list
      */
