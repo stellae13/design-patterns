@@ -9,7 +9,7 @@ import java.util.Queue;
  */
 public class Store implements Observer {
     private Subject subject; // what subject does the observer care about
-    private String title; // the title of the Store (unused)
+    private String title; // the title of the Store (unused, but in the UML)
     private Queue<Book> bestSellers; // The queue of the top 5 bestSellers
     /**
      * The construtor method for a Store 
@@ -18,7 +18,7 @@ public class Store implements Observer {
     public Store(Subject subject) {
         this.subject = subject;
         this.subject.registerObserver(this); // we have to register that customer as an observer in order for them to be notified of new books
-        this.bestSellers = new LinkedList<Book>(); // initialies the bestSellers Queue as a LinkedList
+        this.bestSellers = new LinkedList<Book>(); // initialies the bestSellers Queue as a LinkedList (Queue is an interface)
     }
     @Override
     /**
