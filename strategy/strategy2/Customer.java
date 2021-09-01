@@ -17,12 +17,14 @@ public class Customer implements Observer {
     }
     @Override
     public void update(Book book) {
-        System.out.println("updater method");     
+        this.wishList.add(book);     
     }
 
     @Override
     public void display() {
-        System.out.println("display method");
+        System.out.println("Wish List: ");
+        for(Book book: wishList)
+            System.out.println("- " + book.toString());
     }
     
 }

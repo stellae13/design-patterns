@@ -12,21 +12,23 @@ public class BestSellers implements Subject {
     }
     @Override
     public void registerObserver(Observer observer) {
-        System.out.println("Register observer method");
+        this.observers.add(observer);
     }
 
     @Override
     public void removeObserver(Observer observer) {
-        System.out.println("Remove observer method"); 
+        this.observers.remove(observer);
     }
 
     @Override
-    public void notifyObserver(Observer obeserver) {
-        System.out.println("notify observer method");
+    public void notifyObservers(Book book) {
+        for(Observer observer: observers) 
+            observer.update(book);
     }
 
     public void addBook(Book book) {
-        System.out.println("Add Book method");
+        this.bestSellers.add(book);
+        this.notifyObservers(book);
     }
     
 }
