@@ -10,6 +10,7 @@ public class Store implements Observer {
 
     public Store(Subject subject) {
         this.subject = subject;
+        this.subject.registerObserver(this);
         this.bestSellers = new LinkedList<Book>();
     }
     @Override
@@ -25,6 +26,7 @@ public class Store implements Observer {
         System.out.println("Top 5 Best Sellers: ");
         for(Book book: bestSellers)
             System.out.println("- " + book.toString());
+        System.out.println();
     }
     
 }

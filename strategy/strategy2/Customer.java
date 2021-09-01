@@ -10,6 +10,7 @@ public class Customer implements Observer {
 
     public Customer(Subject subject, String firstName, String lastName) {
         this.subject = subject;
+        this.subject.registerObserver(this);
         this.firstName = firstName;
         this.lastName = lastName;
         wishList = new ArrayList<Book>();
@@ -25,6 +26,7 @@ public class Customer implements Observer {
         System.out.println("Wish List: ");
         for(Book book: wishList)
             System.out.println("- " + book.toString());
+        System.out.println();
     }
     
 }
