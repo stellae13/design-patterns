@@ -4,6 +4,7 @@ import java.util.ArrayList;
 /**
  * A Customer is a type of observer that is concerned with all books
  * that have ever been labeled a best seller
+ * @author Stella Garcia 
  */
 public class Customer implements Observer {
     private Subject subject; // what subject does this observer care about

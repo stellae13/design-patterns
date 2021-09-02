@@ -2,6 +2,7 @@ package strategy2;
 /**
  * The subject interface 
  * Different types of subjects that the observers can be concerned with
+ * @author Stella Garcia 
  */
 public interface Subject {
     /**

@@ -2,6 +2,7 @@ package strategy2;
 /**
  * The observer interface
  * Different types of Observers will impliment this interface
+ * @author Stella Garcia
  */
 public interface Observer {
     /**

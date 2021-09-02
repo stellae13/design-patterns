@@ -1,6 +1,7 @@
 package strategy2;
 /**
  * This is the class for the Book type
+ * @author Stella Garcia
  */
 public class Book {
     private String title; // Title of the book

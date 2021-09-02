@@ -6,6 +6,7 @@ import java.util.Queue;
 /**
  * A Store is a type of observer that is concerned with the 
  * top 5 bestSellers 
+ * @author Stella Garcia
  */
 public class Store implements Observer {
     private Subject subject; // what subject does the observer care about
@@ -20,6 +21,7 @@ public class Store implements Observer {
         this.subject.registerObserver(this); // we have to register that customer as an observer in order for them to be notified of new books
         this.bestSellers = new LinkedList<Book>(); // initialies the bestSellers Queue as a LinkedList (Queue is an interface)
     }
+
     /**
      * This update method add a new book to the bestSellers queue 
      * and removes the oldest one if the queue is larger than 5

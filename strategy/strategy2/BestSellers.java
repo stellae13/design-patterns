@@ -3,6 +3,7 @@ package strategy2;
 import java.util.ArrayList;
 /**
  * BestSellers is a type of Subject that deals with Books 
+ * @author Stella Garcia
  */
 public class BestSellers implements Subject {
     private ArrayList<Observer> observers; // These are the poeple/groups who care about the Best Sellers
@@ -41,7 +42,7 @@ public class BestSellers implements Subject {
         for(Observer observer: observers) 
             observer.update(book);
     }
-    
+
     /**
      * This adds a book to the bestSellers ArrayList and calls the notifyObservers method
      * to let everyone/everything that is observing the bestSellers list know
