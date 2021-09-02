@@ -15,6 +15,7 @@ public class BestSellers implements Subject {
         this.observers = new ArrayList<Observer>();
         this.bestSellers = new ArrayList<Book>();
     }
+
     /**
      * This adds a new observer to the observers ArrayList
      */
@@ -22,6 +23,7 @@ public class BestSellers implements Subject {
     public void registerObserver(Observer observer) {
         this.observers.add(observer);
     }
+
     /**
      * This removes a specified observer from the observers ArrayList
      */
@@ -29,6 +31,7 @@ public class BestSellers implements Subject {
     public void removeObserver(Observer observer) {
         this.observers.remove(observer);
     }
+
     /**
      * This will notify each observer (no matter they type) of a new book
      * being labeled as a bestSeller
@@ -38,6 +41,7 @@ public class BestSellers implements Subject {
         for(Observer observer: observers) 
             observer.update(book);
     }
+    
     /**
      * This adds a book to the bestSellers ArrayList and calls the notifyObservers method
      * to let everyone/everything that is observing the bestSellers list know

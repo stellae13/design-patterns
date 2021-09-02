@@ -20,12 +20,12 @@ public class Store implements Observer {
         this.subject.registerObserver(this); // we have to register that customer as an observer in order for them to be notified of new books
         this.bestSellers = new LinkedList<Book>(); // initialies the bestSellers Queue as a LinkedList (Queue is an interface)
     }
-    @Override
     /**
      * This update method add a new book to the bestSellers queue 
      * and removes the oldest one if the queue is larger than 5
      * @param book the new book that is being added to the bestSellers queue
      */
+    @Override
     public void update(Book book) {
         this.bestSellers.add(book);
 
@@ -33,16 +33,16 @@ public class Store implements Observer {
             this.bestSellers.remove(); // this removes the first element in the queue and moves the remaining data down one index
     }
 
-    @Override
-    /**
+     /**
      * This display method displays the bestSellers queue
      * in the format specified by the assignment 
      */
+    @Override
     public void display() {
         System.out.println("Top 5 Best Sellers: ");
-        for(Book book: bestSellers)
+        for(Book book: bestSellers) 
             System.out.println("- " + book.toString());
-        System.out.println();
+        System.out.println(); // the sample output had a space at the end of the display foor the store
     }
     
 }

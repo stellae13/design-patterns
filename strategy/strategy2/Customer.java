@@ -25,20 +25,20 @@ public class Customer implements Observer {
 
     }
 
-    @Override
     /**
      * The update methods adds a new book to the wishList ArrayList
      * @param book The book being added to the wishList
      */
+    @Override
     public void update(Book book) {
         this.wishList.add(book);     
     }
 
-    @Override
-    /**
+     /**
      * The display methods prints the Customer's entire wishList in the 
      * format specified in the assignment. 
      */
+    @Override
     public void display() {
         System.out.println("Wish List: ");
         for(Book book: wishList)
