@@ -11,12 +11,14 @@ public interface Subject {
      * @param observer the observer being added
      */
     public void registerObserver(Observer observer);
+
     /**
      * Removes a observer from the list of observers
      * concerned with the specific subject
      * @param observer the observer to be removed 
      */
     public void removeObserver(Observer observer);
+    
     /**
      * Notifies the observers of a new book being added
      * @param book the new book being added

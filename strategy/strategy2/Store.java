@@ -12,6 +12,7 @@ public class Store implements Observer {
     private Subject subject; // what subject does the observer care about
     private String title; // the title of the Store (unused, but in the UML)
     private Queue<Book> bestSellers; // The queue of the top 5 bestSellers
+    
     /**
      * The construtor method for a Store 
      * @param subject the Subject in which the Store wants to observe

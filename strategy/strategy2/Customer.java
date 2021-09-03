@@ -11,6 +11,7 @@ public class Customer implements Observer {
     private String firstName; // the customer's first name
     private String lastName; // the customer's last name
     private ArrayList<Book> wishList; // the customer's wish list which contains every best seller
+
     /**
      * This is the constructor for a Customer 
      * @param subject The subject in which the Customer wants to observe

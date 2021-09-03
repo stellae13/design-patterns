@@ -8,6 +8,7 @@ import java.util.ArrayList;
 public class BestSellers implements Subject {
     private ArrayList<Observer> observers; // These are the poeple/groups who care about the Best Sellers
     private ArrayList<Book> bestSellers; // There are all of the books that have ever been labeled Best Seller
+    
     /**
      * This is the constructor for Best Sellers
      * It initializes the observers and the best sellers ArrayLists

@@ -11,6 +11,7 @@ public interface Observer {
      * @param book the book that is being updated 
      */
     public void update(Book book);
+    
     /**
      * Each type of Observer will need to implement this method to
      * specify how it will be displayed
