@@ -10,8 +10,8 @@ public abstract class CharacterDecorator extends Character{
         this.character = character;
         this.sections = new ArrayList<String>();
         
-        for(int i = 0; i < super.sections.size(); i++) {
-            this.sections.set(i, super.sections.get(i));
+        for(int i = 0; i < character.sections.size(); i++) {
+            this.sections.add(this.character.sections.get(i));
         }
 
         this.customize();

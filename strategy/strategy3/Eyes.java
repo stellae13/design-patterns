@@ -8,8 +8,7 @@ public class Eyes extends CharacterDecorator{
 
     @Override
     public void customize() {
-        super.sections.set(38,"O");
-        super.sections.set(41,"O");
+        super.sections.set(3, "|  o o  |");
     }
     
 }

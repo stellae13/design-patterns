@@ -9,8 +9,7 @@ public class Nose extends CharacterDecorator {
 
     @Override
     public void customize() {
-        super.sections.set(50,"(");
-        super.sections.set(51,")"); 
+        super.sections.set(4, "|   >   |");
     }
     
 }
