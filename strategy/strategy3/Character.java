@@ -5,6 +5,7 @@ import java.util.ArrayList;
  * Abstract class Character
  * Any child of character will have access to these
  * attributes and methods 
+ * @author Stella Garcia
  */
 public abstract class Character {
     protected ArrayList<String> sections; // each section of the character will be stored here
