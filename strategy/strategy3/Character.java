@@ -11,15 +11,18 @@ public abstract class Character {
 
     /**
      * The Character constructor
-     * initializes the sections array list 
+     * initializes the sections ArrayList
      */
     public Character() {
         sections = new ArrayList<String>();
-
     }
 
+    /**
+     * The draw method
+     * Loops through the ArrayList and prints out each section
+     */
     public void draw() {
-        for (int i = 0; i < sections.size(); i++)
-            System.out.println(sections.get(i));
+        for(String section: sections)
+            System.out.println(section);
     }
 }
