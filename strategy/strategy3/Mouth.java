@@ -9,8 +9,8 @@ public class Mouth extends CharacterDecorator{
 
     @Override
     public void customize() {
-        // TODO Auto-generated method stub
-        
+        super.sections.set(68,"_");
+        super.sections.set(69,"_");
     }
     
 }

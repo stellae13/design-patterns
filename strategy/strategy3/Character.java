@@ -11,6 +11,10 @@ public abstract class Character {
     }
 
     public void draw() {
-
+        for (int i = 0; i < sections.size(); i++) {
+            System.out.print(sections.get(i));
+            if(i%13 == 0)
+                System.out.println();
+        }
     }
 }

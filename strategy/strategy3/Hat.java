@@ -9,8 +9,14 @@ public class Hat extends CharacterDecorator {
 
     @Override
     public void customize() {
-        // TODO Auto-generated method stub
-        
+        super.sections.set(4,"_");
+        super.sections.set(5,"_");
+        super.sections.set(6,"_");
+        super.sections.set(13,"|");
+        super.sections.set(16,"|");
+        super.sections.set(21,"_");
+        super.sections.set(26,"_");
+    
     }
     
 }

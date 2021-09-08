@@ -9,8 +9,8 @@ public class Nose extends CharacterDecorator {
 
     @Override
     public void customize() {
-        // TODO Auto-generated method stub
-        
+        super.sections.set(50,"(");
+        super.sections.set(51,")"); 
     }
     
 }
