@@ -21,7 +21,6 @@ public class PotatoeDriver {
         Character eyeHatPotatoe2 = new Eyes(hatPotatoe2);
 
         eyeHatPotatoe2.draw();
-
     }
 
     public static void main(String[] args) {

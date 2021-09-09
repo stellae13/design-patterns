@@ -13,8 +13,8 @@ public class PotatoeHead extends Character{
      */
     public PotatoeHead() {
         super(); // calls the super constructor, which initializes the sections ArrayList
-        super.sections.add("         "); // this is left for adding a hat
-        super.sections.add("  ______");
+        super.sections.add("   ____   ");
+        super.sections.add("  /    \\ ");
         super.sections.add(" /      \\");
         super.sections.add("|        |");
         super.sections.add("|        |");
