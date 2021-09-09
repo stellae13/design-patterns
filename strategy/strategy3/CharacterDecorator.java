@@ -21,11 +21,10 @@ public abstract class CharacterDecorator extends Character{
     public CharacterDecorator(Character character) {
         this.character = character;
         this.sections = new ArrayList<String>();
+
+        for(String section: character.sections)
+            this.sections.add(section);
         
-        for(int i = 0; i < character.sections.size(); i++) {
-            this.sections.add(this.character.sections.get(i)); // loops through the character's sections and copies it to this.sections
-        }
- 
         this.customize(); // call the customize method
     }
 
