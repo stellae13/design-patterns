@@ -23,7 +23,7 @@ public class Mouth extends CharacterDecorator{
      */
     @Override
     public void customize() {
-        super.sections.set(5, "\\  --- /");
+        super.sections.set(5, " \\ ---- /");
     }
     
 }
