@@ -19,6 +19,6 @@ public class PotatoeHead extends Character{
         super.sections.add("|        |");
         super.sections.add("|        |");
         super.sections.add(" \\      /");
-        super.sections.add("  \\____/ ");
+        super.sections.add("  \\____/ "); // these last 7 lines add the default head to the sections ArrayList
     }
 }
