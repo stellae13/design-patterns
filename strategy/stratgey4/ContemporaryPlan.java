@@ -2,25 +2,30 @@ package stratgey4;
 
 public class ContemporaryPlan extends HousePlan{
 
-    public ContemporaryPlan(int numRooms, int numWindows, int squareFeet) {
-        super(numRooms, numWindows, squareFeet);
+    public ContemporaryPlan() {
+        super(5, 40, 300);
+        setMaterials();
+        setFeatures();
     }
 
     @Override
     protected void setMaterials() {
-        System.out.println("Set materials contemporary");
-        
+        super.materials.add("Ceramics");
+        super.materials.add("High-Strength Alloys");
+        super.materials.add("Composites"); 
     }
 
     @Override
     protected void setFeatures() {
-        System.out.println("Set features contemporary");
-        
+        super.features.add("Oversized Windows");
+        super.features.add("Unconventional Roofs");
+        super.features.add("Minimalism");   
+        super.features.add("Open Floor Plan");
     }
-
-    @Override 
+    
+    @Override
     public String toString() {
-        return "Contemporary toString";
+        return "Contemporary Home \n" + super.toString();
     }
     
 }

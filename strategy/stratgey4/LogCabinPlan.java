@@ -2,25 +2,29 @@ package stratgey4;
 
 public class LogCabinPlan extends HousePlan {
 
-    public LogCabinPlan(int numRooms, int numWindows, int squareFeet) {
-        super(numRooms, numWindows, squareFeet);
+    public LogCabinPlan() {
+        super(2, 10, 1800);
+        setMaterials();
+        setFeatures();
     }
 
     @Override
     protected void setMaterials() {
-        System.out.println("Set materials log cabin");
-        
+        super.materials.add("Log Sliding");
+        super.materials.add("Board and Batten Sliding");
+        super.materials.add("White Pine");        
     }
 
     @Override
     protected void setFeatures() {
-       System.out.println("Set features log cabin");
-        
+       super.features.add("Timbered Roof");
+       super.features.add("High Insulation");
+       super.features.add("Rustic effect");
     }
 
     @Override 
     public String toString() {
-        return "toString of log cabin";
+        return "Log Cabin \n" + super.toString();
     }
     
 }
