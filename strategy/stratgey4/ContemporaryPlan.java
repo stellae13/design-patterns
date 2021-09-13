@@ -9,7 +9,7 @@ public class ContemporaryPlan extends HousePlan{
      * Constructor for ContemporaryPlan
      */
     public ContemporaryPlan() {
-        super(5, 40, 300); // set the three attributes of HousePlan according to assignment guidlines
+        super(5, 40, 3000); // set the three attributes of HousePlan according to assignment guidlines
         setMaterials(); // calls setMaterials of ContemporaryPlan
         setFeatures(); // calls setFeatrures of ContemporaryPlan
     }
