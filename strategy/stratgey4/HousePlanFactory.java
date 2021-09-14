@@ -8,7 +8,7 @@ package stratgey4;
  */
 public class HousePlanFactory  {
     /**
-     * staic (class method) createHousePlan method
+     * static (class method) createHousePlan method
      * @param type type of HousePlan to be created
      * @return new HousePlan that was just created 
      */
