@@ -28,16 +28,12 @@ public class Airline {
     }
 
     private Flight[] growArray(Flight[] flights) {
-        Flight[] temp = new Flight[this.size];
+        Flight[] temp = new Flight[this.size*2];
         for(int i = 0; i < this.size; ++i) {
             temp[i] = this.flights[i];
         }
-        this.flights = new Flight[this.size*2];
         this.size*=2;
-        for(int i = 0; i < temp.length; ++i) {
-            this.flights[i] = temp[i];
-        }
-        return this.flights;
+        return temp;
     }
 
     public FlightIterator createIterator() {
