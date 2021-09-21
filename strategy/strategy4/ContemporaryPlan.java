@@ -1,4 +1,4 @@
-package stratgey4;
+package strategy4;
 /**
  * ContemporaryPlan is a type of HousePlan
  * @author Stella Garcia

@@ -1,4 +1,4 @@
-package stratgey4;
+package strategy4;
 /**
  * HousePlanFactory
  * facilitates the creation of 

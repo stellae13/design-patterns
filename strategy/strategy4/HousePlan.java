@@ -1,4 +1,4 @@
-package stratgey4;
+package strategy4;
 
 import java.util.ArrayList;;
 /**

@@ -1,4 +1,4 @@
-package stratgey4;
+package strategy4;
 
 /**
  * Runs the housing plans program

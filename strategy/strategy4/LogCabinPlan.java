@@ -1,4 +1,4 @@
-package stratgey4;
+package strategy4;
 /**
  * LogCabinPlan is a type of HousePlan
  * @author Stella Garcia
