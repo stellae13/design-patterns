@@ -13,7 +13,7 @@ public class FlightIterator implements java.util.Iterator<Flight> {
       */
     public FlightIterator(Flight[] flights) {
         this.flights = flights; 
-        position = -1; // has to start before the array (has not been iterater through yet)
+        position = 0; 
     }
 
     /**
@@ -23,7 +23,7 @@ public class FlightIterator implements java.util.Iterator<Flight> {
      */
     @Override
     public boolean hasNext() {
-        return flights[position + 1] != null;
+        return position < flights.length && flights[position] != null;
     }
 
     /**
@@ -33,11 +33,9 @@ public class FlightIterator implements java.util.Iterator<Flight> {
     @Override
     public Flight next() {
         if(hasNext()) { // if it has a next element
-            this.position++; // must move up a position
-            return flights[position];
-        } else {
+            return flights[position++];
+        } else
             return null; // if there is no next element
-        }
     }
     
 }
