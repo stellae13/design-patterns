@@ -29,23 +29,25 @@ public class TriviaGame {
     String answer;
     boolean correct;
 
-   
     while(keepPlaying) {
+
         correct = playRound();
         if(correct)
             score++;
-
-        System.out.println("(P)lay or (Q)uit: ");
+        
+        System.out.print("(P)lay or (Q)uit: ");
         answer = reader.nextLine();
+        reader.nextLine();
         
         if(answer.equals("P"))
             keepPlaying = true;
-        else 
-            keepPlaying = false;
-            
+        else {
+            keepPlaying = false; 
+            System.out.println("You won " +  score + " game(s)!");
+            System.out.println("Thanks for playing! Goodbye!"); 
+        }   
     }
-    System.out.println("You won " +  score + " game(s)!");
-    System.out.println("Thanks for playing! Goodbye");
+
   }
 
   public boolean playRound() {
@@ -59,7 +61,7 @@ public class TriviaGame {
             return true;
         } else {
             System.out.println("You got it wrong!");
-            System.out.println("The correct answer is" + questions.get(ques).getCorrectAnswer());
+            System.out.println("The correct answer is " + questions.get(ques).getCorrectAnswer());
             return false;
         }
   }

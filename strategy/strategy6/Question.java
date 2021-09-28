@@ -11,7 +11,7 @@ public class Question {
        answers[0] = ans1;
        answers[1] = ans2;
        answers[2] = ans3;
-       answers[4] = ans4;
+       answers[3] = ans4;
        this.correctAnswer = correctAnswer;
    }
 
