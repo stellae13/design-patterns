@@ -17,7 +17,6 @@ public class TriviaGame {
     rand = new Random();
     reader = new Scanner(System.in);
     System.out.println("Welcome to the Trivia Game!");
-    play();
   }
 
   public static TriviaGame getInstance() {
@@ -26,28 +25,27 @@ public class TriviaGame {
 
   public void play() {
     boolean keepPlaying = true;
-    String answer;
+    char answer;
     boolean correct;
 
-    while(keepPlaying) {
-
+    do {
         correct = playRound();
         if(correct)
             score++;
         
         System.out.print("(P)lay or (Q)uit: ");
-        answer = reader.nextLine();
+        answer = reader.next().charAt(0);
         reader.nextLine();
-        
-        if(answer.equals("P"))
+        System.out.println(answer);
+        if(answer == 'P')
             keepPlaying = true;
-        else {
-            keepPlaying = false; 
-            System.out.println("You won " +  score + " game(s)!");
-            System.out.println("Thanks for playing! Goodbye!"); 
-        }   
-    }
+        else 
+            keepPlaying = false;  
 
+    } while (keepPlaying);
+
+    System.out.println("You won " +  score + " game(s)!");
+    System.out.println("Thanks for playing! Goodbye!"); 
   }
 
   public boolean playRound() {
