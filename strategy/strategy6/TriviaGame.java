@@ -36,7 +36,7 @@ public class TriviaGame {
         
         System.out.print("(P)lay or (Q)uit: ");
         answer = reader.next().charAt(0);
-        reader.nextLine();
+        //reader.nextLine();
         System.out.println(answer);
         if(answer == 'P')
             keepPlaying = true;
