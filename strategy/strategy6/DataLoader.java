@@ -11,7 +11,7 @@ import java.util.Scanner;
  */
 public class DataLoader {
     //relative path to the file, based on the directory you currently have open
-    private static final String FILE_NAME = "strategy/strategy6/singleton/questions.txt";
+    private static final String FILE_NAME = "strategy/strategy6/questions.txt";
 
     /**third
      * Returns a list of all trivia questions from the text file

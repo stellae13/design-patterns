@@ -20,7 +20,8 @@ public class TriviaGame {
   }
 
   public static TriviaGame getInstance() {
-      return new TriviaGame();
+      triviaGame = new TriviaGame();
+      return triviaGame;
   }
 
   public void play() {
