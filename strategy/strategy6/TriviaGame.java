@@ -25,7 +25,7 @@ public class TriviaGame {
   }
 
   public void play() {
-    boolean keepPlaying = true;
+    boolean keepPlaying;
     char answer;
     boolean correct;
 
@@ -33,27 +33,43 @@ public class TriviaGame {
         correct = playRound();
         if(correct)
             score++;
-        
+
+        do {
         System.out.print("(P)lay or (Q)uit: ");
         answer = reader.next().charAt(0);
-        //reader.nextLine();
-        System.out.println(answer);
+
+        if(answer != 'P' && answer != 'Q')
+          System.out.println("Invalid entry! Please enter 'P' to keep playing or 'Q' to quit");
+        
+        } while (answer != 'P' && answer != 'Q');
+
         if(answer == 'P')
             keepPlaying = true;
         else 
             keepPlaying = false;  
 
     } while (keepPlaying);
-
-    System.out.println("You won " +  score + " game(s)!");
+    
+    if(score == 1)
+        System.out.println("You won " +  score + " game!");
+    else
+        System.out.println("You won " +  score + " games!");
     System.out.println("Thanks for playing! Goodbye!"); 
   }
 
   public boolean playRound() {
+      int userAnswer;
       int ques = rand.nextInt(questions.size());
       System.out.println(questions.get(ques));
+      do{
+
       System.out.println("Enter answer: ");
-      int userAnswer = reader.nextInt();
+      userAnswer = reader.nextInt();
+      
+      if(userAnswer > 4 || userAnswer < 1)
+        System.out.println("Invalid Entry! Please select an answer by entering 1, 2, 3, or 4");
+
+      } while(userAnswer > 4 || userAnswer < 1);
       
         if(questions.get(ques).isCorrect(userAnswer)) {
             System.out.println("YAY! you got it right!");
