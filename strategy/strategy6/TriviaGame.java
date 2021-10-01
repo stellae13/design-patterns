@@ -82,6 +82,7 @@ public class TriviaGame {
       do{
       System.out.println("Enter answer: ");
       userAnswer = reader.nextInt();
+      reader.nextLine();
       
       if(userAnswer > 4 || userAnswer < 1) // makes sure that the answer selection is valid 
         System.out.println("Invalid Entry! Please select an answer by entering 1, 2, 3, or 4");
