@@ -6,26 +6,27 @@ public class Easy implements State {
 
     @Override
     public int getNum() {
-        // TODO Auto-generated method stub
-        return 0;
+        return (int) ((Math.random() * 10) + 1);
     }
 
     @Override
     public String getOperation() {
-        // TODO Auto-generated method stub
-        return null;
+        int choice = (int) (Math.random() * 2) + 1;
+        if (choice == 1)
+            return "+";
+        else
+            return "-";
     }
 
     @Override
     public void levelUp() {
-        // TODO Auto-generated method stub
+        System.out.println("You have beenn advanced to medium mode");
+        game.setState(new Medium());
 
     }
 
     @Override
     public void levelDown() {
-        // TODO Auto-generated method stub
-
+        System.out.println("You seem to be struggling you may want to study.");
     }
-
 }

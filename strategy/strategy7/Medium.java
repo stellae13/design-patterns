@@ -5,25 +5,29 @@ public class Medium implements State {
 
     @Override
     public int getNum() {
-        // TODO Auto-generated method stub
-        return 0;
+        return (int) ((Math.random() * 50) + 1);
     }
 
     @Override
     public String getOperation() {
-        // TODO Auto-generated method stub
-        return null;
+        int choice = (int) (Math.random() * 3) + 1;
+        if (choice == 1)
+            return "+";
+        else if (choice == 2)
+            return "-";
+        else
+            return "*";
     }
 
     @Override
     public void levelUp() {
-        // TODO Auto-generated method stub
-
+        System.out.println("You have been advanced to the hardest mode");
+        game.setState(new Hard());
     }
 
     @Override
     public void levelDown() {
-        // TODO Auto-generated method stub
-
+        System.out.println("You are struggling, let's go to easy mode");
+        game.setState(new Easy());
     }
 }
