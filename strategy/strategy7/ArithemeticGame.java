@@ -16,7 +16,7 @@ public class ArithemeticGame {
     private State state;
     // score and Scanner
     private int score;
-    Scanner input;
+    private Scanner input;
 
     /**
      * ArithemeticGame constructor Initializes all of the variables and starts the
