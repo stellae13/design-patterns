@@ -3,6 +3,10 @@ package strategy7;
 public class Hard implements State {
     private ArithemeticGame game;
 
+    public Hard(ArithemeticGame game) {
+        this.game = game;
+    }
+
     @Override
     public int getNum() {
         return (int) ((Math.random() * 100) + 1);
@@ -29,7 +33,7 @@ public class Hard implements State {
 
     @Override
     public void levelDown() {
-        game.setState(new Medium());
+        game.setState(game.getMediumState());
         System.out.println("You seem to be struggling, let's go to medium mode");
     }
 }

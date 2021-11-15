@@ -4,6 +4,10 @@ public class Easy implements State {
 
     private ArithemeticGame game;
 
+    public Easy(ArithemeticGame game) {
+        this.game = game;
+    }
+
     @Override
     public int getNum() {
         return (int) ((Math.random() * 10) + 1);
@@ -21,7 +25,7 @@ public class Easy implements State {
     @Override
     public void levelUp() {
         System.out.println("You have beenn advanced to medium mode");
-        game.setState(new Medium());
+        game.setState(game.getMediumState());
 
     }
 
