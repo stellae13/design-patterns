@@ -136,13 +136,7 @@ public class MedicalRecordAdapter implements MedicalRecord {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
         String birthday = simpleDateFormat.format(getBirthday());
         toReturn += "Birthday: " + birthday + "\n";
-        String gender = record.getGender();
-        toReturn += "Gender: ";
-
-        if (gender.equalsIgnoreCase("male"))
-            toReturn += "Male" + "\n";
-        else
-            toReturn += "Female" + "\n";
+        toReturn += "Gender: " + this.getGender() + "\n";
 
         toReturn += "Medical Visit History: \n";
 
