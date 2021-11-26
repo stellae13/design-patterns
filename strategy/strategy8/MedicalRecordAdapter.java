@@ -5,29 +5,61 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * MedicalRecordAdapter is a Medical Record
+ * 
+ * @author Stella Garcia
+ */
 public class MedicalRecordAdapter implements MedicalRecord {
 
-    private HealthRecord record;
+    private HealthRecord record; // the health record we want to adapt
 
+    /**
+     * Constructor
+     * 
+     * @param record sets the HealhRecord to adapt
+     */
     public MedicalRecordAdapter(HealthRecord record) {
         this.record = record;
     }
 
+    /**
+     * returns the first name of the patient must use substring because the old
+     * system stored the full name in one string
+     * 
+     * @return String of the first name
+     */
     @Override
     public String getFirstName() {
         return record.getName().substring(0, record.getName().indexOf(" "));
     }
 
+    /**
+     * returns the last name of the patient must use substring because the old
+     * system stored the full name in one string
+     * 
+     * @return String of the last name
+     */
     @Override
     public String getLastName() {
         return record.getName().substring(record.getName().indexOf(" ") + 1);
     }
 
+    /**
+     * getBirthday method gets the birthday from the record
+     * 
+     * @return Date the birthday
+     */
     @Override
     public Date getBirthday() {
         return record.getBirthdate();
     }
 
+    /**
+     * getGender method converts from a String to a Gender type
+     * 
+     * @return Gender (enum) from the original string
+     */
     @Override
     public Gender getGender() {
         String gender = record.getGender();
@@ -40,12 +72,25 @@ public class MedicalRecordAdapter implements MedicalRecord {
 
     }
 
+    /**
+     * adds the visit to the arrayList
+     * 
+     * @param date        Date the date of the visit
+     * @param well        boolean if the patient is welll or not
+     * @param description String a comment about the visit
+     */
     @Override
     public void addVisit(Date date, boolean well, String description) {
         record.addHistory(date, well, description);
 
     }
 
+    /**
+     * Converts all of the Strings stored in the ArrayList of visits into Visit
+     * types
+     * 
+     * @return ArrayList<Visit> all the visits in the correct format
+     */
     @Override
     public ArrayList<Visit> getVisitHistory() {
 
@@ -59,12 +104,12 @@ public class MedicalRecordAdapter implements MedicalRecord {
         for (String visit : history) {
             date = visit.substring(visit.indexOf("Visit: ") + 11, visit.indexOf("\n")); // need to convert
             well = visit.substring((visit.indexOf("Well visit: ") + 12),
-                    visit.indexOf("\n", visit.indexOf("Well visit: "))); //
+                    visit.indexOf("\n", visit.indexOf("Well visit: ")));
             description = visit.substring(visit.indexOf("Comments: ") + 10,
                     visit.indexOf("\n", visit.indexOf("Comments: ")));
 
             try {
-                dateFormatted = new SimpleDateFormat("dd, MM, yyyy").parse(date);
+                dateFormatted = new SimpleDateFormat("dd, MM, yyyy").parse(date); // converts to correct format
             } catch (ParseException e) {
                 e.printStackTrace();
             }
@@ -81,6 +126,11 @@ public class MedicalRecordAdapter implements MedicalRecord {
 
     }
 
+    /**
+     * toString method format specified in assignment description
+     * 
+     * @return String what we want to print when we print out the medical record
+     */
     public String toString() {
         String toReturn = "***** " + getFirstName() + " " + getLastName() + " *****\n";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
